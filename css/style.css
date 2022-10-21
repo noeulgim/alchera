@@ -1,0 +1,478 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+@font-face {
+  font-family: 'AvenirNextLTPro-Regular';
+  src: url('http://anthillrealtors.co.id/wp-content/themes/x-child/fonts/AvenirNextLTPro-Regular.eot');
+  src: url('http://anthillrealtors.co.id/wp-content/themes/x-child/fonts/AvenirNextLTPro-Regular.eot?#iefix') format('embedded-opentype'),
+  url('http://anthillrealtors.co.id/wp-content/themes/x-child/fonts/AvenirNextLTPro-Regular.woff') format('woff'),
+  url('http://anthillrealtors.co.id/wp-content/themes/x-child/fonts/AvenirNextLTPro-Regular.ttf') format('truetype'),
+  url('http://anthillrealtors.co.id/wp-content/themes/x-child/fonts/AvenirNextLTPro-Regular.svg#AvenirNextLTPro-Regular') format('svg');
+}
+
+html,body { height: 100% }
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  color: #32435D;
+  line-height: 28px;
+  font-size: 18px;
+}
+ul,ol { list-style: none; }
+a { color: #fff; }
+h1,h2,h3,h4,h5,h6 { line-height: 1; }
+button { border: none; background: none; }
+
+/*************************** 공통 요소 *******************************/
+
+.more-btn {
+  font-weight: 300;
+  font-size: 22px;
+  text-align: center;
+  color: #fff;
+  background: #406eff;
+  border-radius: 60px;
+  padding: 0 40px;
+  height: 70px;
+  min-width: 280px;
+  line-height: 70px;
+  cursor: pointer;
+}
+
+.more-btn:hover {
+  background: #0c254b;
+}
+
+/*************************** header 영역 *******************************/
+
+#header-wrap {
+  position: absolute;
+  left: 0;
+  top: 0;
+  min-height: 120px;
+  width: 100%;
+  z-index: 300;
+}
+
+#header {
+  margin: 0 auto;
+  max-width: 1440px;
+  padding: 35px 0;
+}
+
+#logo {
+  display: inline-block;
+}
+
+#logo img {
+  width: 180px;
+  height: 50px;
+}
+
+#header .inner { float: right; }
+
+#header .inner #gnb, #header .inner #login-menu { float: left; }
+
+#header .inner ul { overflow: hidden; box-sizing: border-box; }
+
+#header .inner ul li { float: left; }
+
+#gnb li { margin-right: 120px; }
+
+#gnb li a {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 500;
+  height: 50px;
+  font-size: 18px;
+  line-height: 50px;
+  text-align: left;
+}
+
+#login-menu li {
+  display: inline-block;
+  width: 120px;
+  height: 45px;
+  border-radius: 30px;
+  padding: 0 10px;
+  box-sizing: border-box;
+  background: #406eff;
+  text-align: center;
+  cursor: pointer;
+}
+
+#login-menu li a {
+  font-family: 'Noto Sans KR', sans-serif;
+  line-height: 45px;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+#login-menu li:nth-child(2) {
+  margin-left: 15px;
+  width: 100px;
+  background: none;
+  border: 1px solid #fff;
+}
+
+#login-menu li:nth-child(2) a {
+  font-family: 'AvenirNextLTPro-Regular';
+  font-weight: 400;
+  position: relative;
+  display: inline-block;
+  padding-left: 5px;
+  box-sizing: border-box;
+  font-size: 15px;
+  text-align: left;
+  line-height: 25px;
+}
+
+#login-menu li:nth-child(2) a:after {
+  position: relative;
+  content: '';
+  display: inline-block;
+  background-image: url('../img/bg_demo_arrow.png');
+  background-position: center;
+  top: 50%;
+  right: 0;
+  width: 10px;
+  height: 6px;
+  transform: translateY(-50%);
+}
+
+/*************************** 메인 배너 영역 *******************************/
+
+#mainbanner .inner{
+  position: relative;
+  height: 1080px;
+  background: no-repeat 50% 50%;
+  background-size: cover;
+  text-align: center;
+  overflow: hidden;
+}
+
+#mainbanner .inner .video-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .3);
+}
+
+#mainbanner .inner video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-height: 1080px;
+  transform: translate(-50%, -50%);
+  z-index: -100;
+}
+
+#mainbanner .inner .maintext {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+
+#mainbanner .inner .maintext p {
+  position: relative;
+  font-size: 120px;
+  font-weight: 900;
+  color: #fff;
+  line-height: 1.18;
+}
+
+#mainbanner .inner .maintext p:before {
+  position: absolute;
+  content: '';
+  width: 140px;
+  height: 140px;
+  left: 1450px;
+  border-radius: 50%;
+  background: #406eff;
+  z-index: -50;
+}
+
+#mainbanner .inner button {
+  position: absolute;
+  bottom: 70px;
+  width: 43px;
+  height: 62px;
+  background: url('../img/ico_kv_scroll.svg') center no-repeat;
+  /* transform: translateX(-50%); */
+  padding: 0;
+  cursor: pointer;
+}
+
+/*************************** 컨텐츠 영역 *******************************/
+
+section {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-top: 200px;
+  text-align: center;
+}
+
+section .inner > h2 {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 68px;
+  color: #0c254b;
+}
+
+section .inner > p {
+  margin: 40px 230px 0;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 30px;
+  color: #0c254b;
+  margin-bottom: 100px;
+}
+
+/*************** first section *****************/
+
+#first .inner .box-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+#first .inner .box-wrap li {
+  width: calc( (100% - 120px) / 3);
+  text-align: center;
+}
+
+#first .inner .box-wrap .items {
+  padding: 48px 50px;
+  border-radius: 20px;
+  box-sizing: border-box;
+  box-shadow: 0 5px 15px 0 rgb(12, 37, 75, .15);
+  height: 100%;
+}
+
+#first .inner .box-wrap .items h3 {
+  line-height: 1.54;
+  font-size: 56px;
+  font-weight: 700;
+  color: #1c4ab4;
+}
+
+#first .inner .box-wrap .items h3 span {
+  margin: 32px 0;
+  font-size: 20px;
+  color: #0c254b;
+}
+
+#first .inner .box-wrap .items p {
+  font-weight: 300;
+  color: #546681;
+}
+
+#first .inner .box-wrap .items p.box-subtitle {
+  margin-top: 30px;
+  color: #0c254b;
+}
+
+#first .inner .award-wrap {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 80px;
+  background: #f8f8f8;
+  border-radius: 20px;
+}
+
+#first .inner .award-wrap .award-text {
+  display: inline-block;
+  width: calc(100% / 3);
+  padding: 33px 0;
+  text-align: center;
+}
+
+#first .inner .award-wrap .award-text:nth-child(2) {
+  border-left: 1px solid;
+  border-right: 1px solid;
+  border-color: #ced3db;
+}
+
+#first .inner .award-wrap .award-text p:last-child {
+  color: #1c4ab4;
+}
+
+#first button {
+  margin-top: 80px;
+}
+
+/*************** second section *****************/
+
+#container section .inner .thumb-img-wrap {
+  text-align: center; /*자식요소 ul을 가운데 정렬한다.(ul의 display가 inline or inline-block일 때) */
+}
+
+#container section .inner .thumb-img-wrap ul {
+  display: inline-block; /*자식요소 li의 컨텐츠 크기만큼 너비가 지정됨*/
+  overflow: hidden;
+}
+
+#container section .inner .thumb-img-wrap ul:nth-child(1) {
+  margin-top: 70px;
+}
+
+#container section .inner .thumb-img-wrap ul:nth-child(2) {
+  margin-top: 80px;
+}
+
+#container section .inner .thumb-img-wrap ul li {
+  float: left;
+  width: calc( 100% / 6 );
+  height: 37px;
+}
+
+#container section .inner .thumb-img-wrap ul li img {
+  width: 100%; /*이미지 너비가 220px 이상/이하면 이미지의 크기가 일정하게 커지게 하기위함(li 요소의 너비 % 기준)*/
+}
+
+/* section 세번째 */
+#container section .inner .box {
+  float: left;
+  width: 50%;
+  min-height: 650px;
+  text-align: center;
+}
+
+#container section .inner .box.img {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover; /*cover를 적용하면 위에 position 요소는 필요없음*/
+}
+
+#container section:nth-child(3) .inner .box.img {
+  background: url('../img/section_3/bg_img.png');
+}
+
+/* section 네번째 */
+#container section:nth-child(4) {
+  background-color: #f4f4f4;
+  background-image: url('../img/section_4/bg_img.png');
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: calc( 50% + 665px ) center; /*665px=720-55*/
+}
+
+#container section:nth-child(4) .inner .box {
+  text-align: left;
+}
+
+#container section:nth-child(4) .inner .box .text-box {
+  padding-left: 50px;
+}
+
+/* section 다섯번째 */
+#container section:nth-child(5) {
+  background-color: #1d314a;
+}
+
+#container section:nth-child(5) .inner h2 { color: #fff; }
+
+#container section:nth-child(5) .inner .box.img {
+  background-image: url('../img/section_5/bg_img.png');
+  background-size: auto 610px;
+  background-position: right bottom;
+}
+
+#container section .inner .box .text-box {
+  display: inline-block;
+  text-align: left;
+  margin-top: 160.5px;
+  padding-left: 140px;
+}
+
+#container section .inner .box .text-box h2 { line-height: 60px; }
+
+#container section .inner .box .text-box a {
+  text-align: center;
+  margin-top: 35px;
+}
+
+/* 하단 영역 */
+#footer {
+  background-color: #eee;
+}
+
+#footer .inner {
+  position: relative;
+  width: 1320px;
+  height: 200px;
+  padding: 50px 20px; /*너비값에 포함됨 ->그래서 박스사이징함*/
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+#footer .inner .f-box {
+  float: left;
+}
+
+#footer .inner .f-box:nth-child(2) {
+  padding-left: 75px;
+}
+
+/* site menu */
+#footer .inner .f-box ul { overflow: hidden; }
+
+#footer .inner .f-box ul li {
+  float: left;
+  height: 20px;
+  margin-right: 40px;
+}
+
+#footer .inner .f-box ul li:last-child { margin-right: 0; }
+
+#footer .inner .f-box ul li a {
+  line-height: 20px;
+  color: #333;
+}
+
+#footer .inner .f-box .tel {
+  /* font-size: 16px; */
+  margin-top: 17px;
+  line-height: 1; /*font-size와 동일*/
+  color: #333;
+  font-weight: bold;
+}
+
+#footer .inner .f-box .copyright {
+  margin-top: 21px;
+  font-size: 12px;
+  line-height: 16px;
+  color: #777;
+  text-transform: uppercase;
+}
+
+#familysite {
+  position: absolute;
+  width: 190px;
+  height: 30px;
+  top: 41px;
+  right: 20px;
+  border: 1px solid #d1d1d1;
+  color: #333;
+  text-transform: capitalize;
+  outline: none;
+  appearance: none;
+  -ms-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  -webkit-appearance: none;
+  padding: 0 15px;
+  background-image: url('../img/select_box_arrow.png');
+  background-repeat: no-repeat;
+  background-position: calc( 100% - 15px ) center;
+}
+
+select::-ms-expand { /*IE 브라우저 select box arrow button 이미지 삭제*/
+  display: none;
+}
+
+#familysite:focus {
+  border: 1px solid #999;
+  background-image: url('../img/select_box_arrow_focus.png');
+}
