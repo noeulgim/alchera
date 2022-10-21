@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+    <g transform="translate(-1650)">
+        <circle data-name="타원 1" cx="9" cy="9" r="9" transform="translate(1650)" style="fill:#406eff"/>
+        <path data-name="합치기 1" d="M.147 7.924a.5.5 0 0 1 0-.706l3.181-3.182L.147.853A.5.5 0 1 1 .854.147l3.535 3.535a.5.5 0 0 1 0 .707L.854 7.924a.5.5 0 0 1-.707 0z" transform="translate(1657 4.5)" style="fill:#fff"/>
+    </g>
+</svg>

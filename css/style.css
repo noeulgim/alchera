@@ -214,6 +214,10 @@ section {
   text-align: center;
 }
 
+section {
+  width: 1440px;
+}
+
 section .inner > h2 {
   font-weight: 700;
   font-size: 48px;
@@ -265,14 +269,16 @@ section .inner > p {
   color: #0c254b;
 }
 
-#first .inner .box-wrap .items p {
-  font-weight: 300;
-  color: #546681;
-}
 
-#first .inner .box-wrap .items p.box-subtitle {
+#first .inner .box-wrap .items p {
   margin-top: 30px;
   color: #0c254b;
+}
+
+#first .inner .box-wrap .items p.box-subtext {
+  font-weight: 300;
+  margin-top: 0;
+  color: #546681;
 }
 
 #first .inner .award-wrap {
@@ -306,19 +312,45 @@ section .inner > p {
 
 /*************** second section *****************/
 
-
-
-#container section .inner .box {
-  float: left;
-  width: 50%;
-  min-height: 650px;
-  text-align: center;
+#second .inner {
+  position: relative;
+  width: 1440px;
 }
 
-#container section .inner .box.img {
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover; /*cover를 적용하면 위에 position 요소는 필요없음*/
+#second .inner .box {
+  position: relative;
+}
+
+#second .inner .box.img {
+  position: absolute;
+  margin-left: 680px;
+}
+
+#second .inner .box.img img {
+  width: 700px;
+}
+
+#second .inner .text-box {
+  position: absolute;
+  width: 520px;
+  max-height: 230px;
+  text-align: left;
+  top: 206px;
+}
+
+#second .inner .text-box .text-box.maintitle {
+  margin-bottom: 20px;
+  font-size: 28px;
+  font-weight: 700;
+  color: #1c4ab4;
+}
+
+#second .inner .text-box .text-box.text{
+  margin-bottom: 40px;
+}
+
+#second .inner .text-box a {
+  display: block;
 }
 
 #container section:nth-child(3) .inner .box.img {
@@ -385,19 +417,19 @@ section .inner > p {
   background-position: right bottom;
 }
 
-#container section .inner .box .text-box {
+/* #container section .inner .box .text-box {
   display: inline-block;
   text-align: left;
   margin-top: 160.5px;
   padding-left: 140px;
-}
+} */
 
 #container section .inner .box .text-box h2 { line-height: 60px; }
 
-#container section .inner .box .text-box a {
+/* #container section .inner .box .text-box a {
   text-align: center;
   margin-top: 35px;
-}
+} */
 
 /* 하단 영역 */
 #footer {
