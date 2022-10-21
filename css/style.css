@@ -223,7 +223,7 @@ section .inner > h2 {
 
 section .inner > p {
   margin: 40px 230px 0;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 300;
   line-height: 30px;
   color: #0c254b;
@@ -231,6 +231,8 @@ section .inner > p {
 }
 
 /*************** first section *****************/
+
+#first .inner > p { font-size: 20px; }
 
 #first .inner .box-wrap {
   display: flex;
@@ -304,6 +306,25 @@ section .inner > p {
 
 /*************** second section *****************/
 
+
+
+#container section .inner .box {
+  float: left;
+  width: 50%;
+  min-height: 650px;
+  text-align: center;
+}
+
+#container section .inner .box.img {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover; /*cover를 적용하면 위에 position 요소는 필요없음*/
+}
+
+#container section:nth-child(3) .inner .box.img {
+  background: url('../img/section_3/bg_img.png');
+}
+
 #container section .inner .thumb-img-wrap {
   text-align: center; /*자식요소 ul을 가운데 정렬한다.(ul의 display가 inline or inline-block일 때) */
 }
@@ -331,23 +352,8 @@ section .inner > p {
   width: 100%; /*이미지 너비가 220px 이상/이하면 이미지의 크기가 일정하게 커지게 하기위함(li 요소의 너비 % 기준)*/
 }
 
-/* section 세번째 */
-#container section .inner .box {
-  float: left;
-  width: 50%;
-  min-height: 650px;
-  text-align: center;
-}
+/* section  */
 
-#container section .inner .box.img {
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover; /*cover를 적용하면 위에 position 요소는 필요없음*/
-}
-
-#container section:nth-child(3) .inner .box.img {
-  background: url('../img/section_3/bg_img.png');
-}
 
 /* section 네번째 */
 #container section:nth-child(4) {
