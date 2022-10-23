@@ -23,13 +23,21 @@ button { border: none; background: none; }
 
 /*************************** 공통 요소 *******************************/
 
-.swiper-wrapper {
-  width: 1920px;
-  overflow: visible;
+.swiper {
+  max-width: 1920px;
+  margin: 0 auto;
+  overflow: hidden;
 }
 
 .swiper-slide {
   border-radius: 20px;
+  width: 963.158px;
+  box-sizing: border-box;
+}
+
+.swiper-slide img {
+  width: 100%;
+  max-width: 100%;
 }
 
 .swiper-pagination {
@@ -440,6 +448,40 @@ section .inner > p {
   background: url('../img/section_3/bg_img.png');
 }
 
+/*************** fourth section *****************/
+
+#fourth .swiper-box-wrap {
+  margin-top: 100px;
+  padding: 0 50px;
+}
+
+#fourth .swiper-slide {
+  width: 300px;
+  margin-right: 40px;
+}
+
+#fourth .swiper-news .tumb-box {
+  overflow: hidden;
+}
+
+#fourth .swiper-news .tumb-box img {
+  width: 100%;
+}
+
+#fourth .swiper.fourth {
+  padding: 10px 10px 20px;
+}
+
+#fourth .inner a {
+  margin-top: 80px;
+}
+
+/*************** fifth section *****************/
+
+section#fifth {
+  padding: 200px 0;
+}
+
 
 
 
@@ -471,45 +513,16 @@ section .inner > p {
 }
 
 
-/* section 네번째 */
-
-#fourth .swiper-box-wrap {
-  margin-top: 100px;
-  padding: 0 50px;
-}
-
-#fourth .swiper-slide {
-  width: 300px;
-  margin-right: 40px;
-}
-
-#fourth .swiper-news .tumb-box {
-  overflow: hidden;
-}
-
-#fourth .swiper-news .tumb-box img {
-  width: 100%;
-}
-
-#fourth .swiper.fourth {
-  padding: 10px 10px 20px;
-}
-
-#fourth .inner a {
-  margin-top: 80px;
-}
-
-/* section 다섯번째 */
-
-/* section 여섯번째 */
+/*************** sixth section *****************/
 
 section#sixth {
-  padding: 110px 0 154px;
   width: 100%;
   max-width: 100%;
+  padding: 110px 0 154px;
   background-color: #335fe8;
   border-bottom: 1px solid rgba(12, 37, 74, .2);
 }
+
 
 #sixth .inner h2 {
   color: #fff;
@@ -525,87 +538,265 @@ section#sixth {
   color: #0c254b;
 }
 
-/* 하단 영역 */
+#sixth .inner a:hover {
+  background: #406eff;
+  color: #fff;
+}
+
+/*************************** 하단 영역 *******************************/
 #footer {
+  position: relative;
   background-color: #335fe8;
   padding: 80px 0 90px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 300;
 }
 
 #footer .inner {
   position: relative;
-  width: 1320px;
-  height: 200px;
-  /* padding: 50px 20px; */
+  max-width: 1440px;
   box-sizing: border-box;
   margin: 0 auto;
 }
 
-#footer .inner .f-box {
+#footer .f-box.first {
+  padding-bottom: 35px;
+  border-bottom: 1px solid rgba(12, 37, 74, .2);
+  overflow: hidden;
+}
+
+#foter .f-box.first > a {
   float: left;
 }
 
-#footer .inner .f-box:nth-child(2) {
-  padding-left: 75px;
+#footer .f-box.first > a img {
+  width: 140px;
+  height: 35px;
 }
 
-/* site menu */
-#footer .inner .f-box ul { overflow: hidden; }
+#footer .f-box.first .footer-menu {
+  float: right;
+  font-weight: 300;
+  font-size: 15px;
+  color: #f8f8f8;
+}
 
-#footer .inner .f-box ul li {
+#footer .f-box.first .footer-menu > ul {
+  overflow: hidden;
+}
+
+#footer .f-box.first .footer-menu > ul > li {
   float: left;
-  height: 20px;
-  margin-right: 40px;
+  width: 191px;
+  padding-right: 10px;
+  box-sizing: border-box;
 }
 
-#footer .inner .f-box ul li:last-child { margin-right: 0; }
-
-#footer .inner .f-box ul li a {
-  line-height: 20px;
-  color: #333;
+#footer .f-box.first .footer-menu > ul > li:last-child {
+  width: auto;
 }
 
-#footer .inner .f-box .tel {
-  /* font-size: 16px; */
-  margin-top: 17px;
-  line-height: 1; /*font-size와 동일*/
-  color: #333;
-  font-weight: bold;
+#footer .footer-menu > ul > li > ul {
+  margin-top: 30px;
 }
 
-#footer .inner .f-box .copyright {
-  margin-top: 21px;
-  font-size: 12px;
-  line-height: 16px;
-  color: #777;
-  text-transform: uppercase;
+#footer .footer-menu > ul > li > ul > li {
+  opacity: .7;
+  line-height: 32px;
 }
 
-#familysite {
-  position: absolute;
-  width: 190px;
-  height: 30px;
-  top: 41px;
-  right: 20px;
-  border: 1px solid #d1d1d1;
-  color: #333;
-  text-transform: capitalize;
+#footer .f-box.second {
+  overflow: hidden;
+  padding: 40px 0;
+  border-bottom: 1px solid rgba(12, 37, 74, .2);
+}
+
+#footer .f-box.second .newsletter-wrap {
+  float: left;
+}
+
+#footer .newsletter-wrap .subscribe {
+  float: left;
+  text-align: left;
+}
+
+#footer .newsletter-wrap .subscribe strong {
+  display: inline;
+  font-size: 28px;
+  line-height: 38px;
+}
+
+#footer .newsletter-wrap .subscribe p {
+  margin-top: 10px;
+  font-size: 15px;
+  line-height: 25px;
+  opacity: .7;
+}
+
+#footer .newsletter-wrap .email-wrap {
+  position: relative;
+  float: left;
+}
+
+#footer .email-wrap > input {
+  border-radius: 80px;
+  border: none;
+  width: 688px;
+  height: 73px;
+  margin-left: 70px;
+  font-size: 18px;
+  line-height: 50px;
+  background: #1e48cc;
+  padding: 7px 210px 7px 30px;
+  color: #fff;
+  box-sizing: border-box;
   outline: none;
-  appearance: none;
-  -ms-appearance: none;
-  -moz-appearance: none;
-  -o-appearance: none;
-  -webkit-appearance: none;
-  padding: 0 15px;
-  background-image: url('../img/select_box_arrow.png');
-  background-repeat: no-repeat;
-  background-position: calc( 100% - 15px ) center;
+  vertical-align: middle;
 }
 
-select::-ms-expand { /*IE 브라우저 select box arrow button 이미지 삭제*/
+#footer .email-wrap > input::placeholder {
+  font-size: 15px;
+  line-height: 25px;
+  color: #fff;
+}
+
+#footer .email-wrap button {
+  position: absolute;
+  top: 11px;
+  right: 11px;
+  min-width: 180px;
+  height: 50px;
+  padding: 0 30px;
+  border: 30px;
+  line-height: 50px;
+  font-size: 18px;
+  background: #0c254b;
+}
+
+#footer .email-wrap button:hover {
+  background: #fff;
+  color: #0c254b;
+}
+
+#footer .email-wrap input:last-child {
+}
+
+#footer .email-wrap .check-wrap {
+  margin-top: 10px;
+  margin-left: 70px;
+}
+
+#footer .email-wrap .check-wrap img {
+  position: relative;
+  left: 34px;
+  top: 2px;
+}
+
+#footer .email-wrap .check-wrap input {
   display: none;
 }
 
-#familysite:focus {
-  border: 1px solid #999;
-  background-image: url('../img/select_box_arrow_focus.png');
+#footer .email-wrap .check-wrap label {
+  cursor: pointer;
+  opacity: .7;
+  margin-left: 45px;
+}
+
+#footer .email-wrap .check-wrap label a {
+  text-decoration: underline;
+}
+
+#footer .f-box.second .icon-wrap {
+  float: right;
+}
+
+#footer .icon-wrap a {
+  margin-top: 25px;
+  margin-left: 40px;
+  float: left;
+}
+
+#footer .icon-wrap a:first-child {
+  margin-left: 0;
+  width: 30px;
+  height: 30px;
+}
+
+#footer .icon-wrap img {
+  width: 100%;
+  height: 100%;
+}
+
+#footer .f-box.third {
+  padding-top: 40px;
+}
+
+#footer .f-box.third .address-wrap {
+  overflow: hidden;
+}
+
+#footer .address-wrap .address {
+  float: left;
+}
+
+.address p, .address span {
+  opacity: .7;
+}
+
+#footer .address-wrap .address .familysite {
+  overflow: hidden;
+  margin-top: 40px;
+}
+
+#footer .address-wrap .address .familysite span {
+  float: left;
+  line-height: 40px;
+}
+
+#footer .address-wrap .address .familysite ul {
+  overflow: hidden;
+}
+
+#footer .address-wrap .address .familysite li {
+  float: left;
+  border-radius: 5px;
+  margin-left: 16px;
+  width: 100px;
+  height: 40px;
+}
+
+#footer .address-wrap .address .familysite li:first-child {
+  margin-left: 30px;
+}
+
+#footer .address-wrap .address .familysite li a img {
+  opacity: 1;
+}
+
+#footer .address-wrap .policy {
+  float: right;
+  opacity: .7;
+}
+
+#footer .address-wrap .policy a:first-child {
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+#footer .address-wrap .policy a:last-child {
+  position: relative;
+  padding-left: 30px;
+}
+
+#footer .address-wrap .policy a:after {
+  position: absolute;
+  display: block;
+  content: '';
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 13px;
+  background: #fff;
 }
