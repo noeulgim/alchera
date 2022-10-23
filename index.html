@@ -2,11 +2,14 @@
 <html lang="ko">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="wiph=device-wiph, user-scalable=no">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
     <title>alchera</title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/initial.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/common.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   </head>
   <body>
     <div id="header-wrap">
@@ -57,9 +60,11 @@
                 <div class="img">
                   <img src="./img/svg_reality_01.svg" alt="first">
                 </div>
-                <h3><span>국내</span>1<span>위</span></h3>
-                <p>NIST FRVT 2개 부문 국내 1위</p>
-                <p class="box-subtext">*미국 국립표준기술연구소<br>얼굴인식 벤터 테스트</p>
+                <h3>국내<span>1</span>위</h3>
+                <div class="items-subtext">
+                  <p>NIST FRVT 2개 부문 국내 1위</p>
+                  <p class="box-subtext">*미국 국립표준기술연구소<br>얼굴인식 벤터 테스트</p>
+                </div>
               </div>
             </li>
             <li>
@@ -67,8 +72,10 @@
                 <div class="img">
                   <img src="./img/svg_reality_02.svg" alt="camera">
                 </div>
-                <h3>3.12<span>억대</span></h3>
-                <p>현재까지 알체라 AI기술이 적용된 카메라 개수</p>
+                <h3><span>3.12</span>억대</h3>
+                <div class="items-subtext">
+                  <p>현재까지 알체라 AI기술이 적용된 카메라 개수</p>
+                </div>
               </div>
             </li>
             <li>
@@ -76,9 +83,11 @@
                 <div class="img">
                   <img src="./img/svg_reality_03.svg" alt="acuracy">
                 </div>
-                <h3>99.9<span>%</span></h3>
-                <p>알체라 AIIR SDK 얼굴인식 정확도</p>
-                <p class="box-subtext">*AIIR SDK - AI 얼굴인식엔진</p>
+                <h3><span>99.9</span>%</h3>
+                <div class="items-subtext">
+                  <p>알체라 AIIR SDK 얼굴인식 정확도</p>
+                  <p class="box-subtext">*AIIR SDK - AI 얼굴인식엔진</p>
+                </div>
               </div>
             </li>
           </ul>
@@ -96,7 +105,7 @@
               <p>Batch 5 선정(2019)</p>
             </div>
           </div>
-        <button class="more-btn">회사소개 더보기</button>
+        <a href="#" class="more-btn">회사소개 더보기</a>
       </section>
       <!-- 두번째 섹션 -->
       <section id="second">
@@ -106,36 +115,124 @@
             알체라를 특별하게 만드는 것은 바로 이 AI 기술이며<br>
             우리는 지금도 친밀하고 똑똑하며 무엇보다도 신뢰받는 AI를 제공함으로 꿈의 시대를 앞당기려 노력하고 있습니다.</p>
           <div class="box">
-            <div class="box img">
-              <img src="./img/img_main_visual_01.png" alt="img01">
+            <div class="box-items first">
+              <div class="box-img">
+                <img src="./img/img_main_visual_01.png" alt="img01">
+              </div>
+              <div class="text-box">
+                <p class="text-box-maintitle">Visual AI</p>
+                <p class="text-box-text">시각 정보의 학습을 통해 무엇이든 인식하고 분석할 수 있게 하는<br>일체라의 핵심 기술입니다.</p>
+                <a href="#" class="introduce-btn">Visual AI 기술소개</a>
+              </div>
             </div>
-            <div class="text-box">
-              <p class="text-box maintitle">Visual AI</p>
-              <p class="text-box text">시각 정보의 학습을 통해 무엇이든 인식하고 분석할 수 있게 하는<br>일체라의 핵심 기술입니다.</p>
-              <a href="#" class="introduce-btn">Visual AI 기술소개<img src="./img/btn_more.svg" alt=""></a>
-            </div>
+            <div class="box-items second">
+              <div class="box-img">
+                <img src="./img/img_main_visual_01_03.png" alt="img02">
+              </div>
+              <div class="text-box">
+                <p class="text-box-maintitle">AI Data</p>
+                <p class="text-box-text">알체라는 국내와 베트남에 자체 데이터 센터를 보유, 대용량 DB 수집<br>
+                  및 라벨링 작업을 직접 수행하는 'Full-Stack' AI 회사입니다.</p>
+                  <a href="#" class="introduce-btn">AI Data 자세히 보기</a>
+                </div>
+              </div>
           </div>
         </div>
       </section>
       <!-- 세번째 섹션 -->
+      <section id="third">
+        <div class="inner">
+          <h2>알체라의 AI 기술이 적용된<br>다양한 솔루션을 만나보세요</h2>
+          <p>알체라는 다양한 분야에 AI 솔루션을 제공하며 Visual AI 기술 (AIIR)을 중심으로 생태계를 설계하고 있습니다.<br>
+          더 나은 미래를 위해 어떻게 AIIR를 활용할 수 있을지 확인해보세요.</p>
+        </div>
+        <div class="swiper-pagination-wrap">
+          <ul>
+            <li>AIIR ID</li>
+            <li>AIIR Pass</li>
+            <li>AIIR Scout</li>
+            <li>AIIR FireScout</li>
+          </ul>
+        </div>
+        <div class="swiper third">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="./img/img_main_visual_02_01.png" alt=""></div>
+            <div class="swiper-slide"><img src="./img/img_main_visual_02_02.png" alt=""></div>
+            <div class="swiper-slide"><img src="./img/img_main_visual_02_03.png" alt=""></div>
+            <div class="swiper-slide"><img src="./img/img_main_visual_02_04.png" alt=""></div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </section>
       <!-- 네번째 섹션 -->
       <section id="fourth">
         <div class="inner">
-          <div class="box">
-            <div class="text-box">
-              <h2>새로운 면도경험을<br>선물하세요</h2>
-              <div class="subtitle">건강한 면도 습관을 선물하세요.<br>3단계프리미엄</div>
-              <a href="#" class="common-btn">더 알아보기</a>
+          <h2>알체라의 새로운 소식을 만나보세요</h2>
+          <div class="swiper-box-wrap">
+            <div class="swiper fourth">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="swiper-news">
+                    <div class="tumb-box">
+                      <img src="./img/img_main_visual_02_01.png" alt=""></div>
+                    </div>
+                    <div class="detail-box">
+                      <p>Blog</p>
+                      <p>DS Division이 Event를 즐기는 방법!</p>
+                      <p>2022.09.23</p>
+                    </div>
+                  </div>
+                <div class="swiper-slide">
+                  <div class="swiper-news">
+                    <div class="tumb-box">
+                      <img src="./img/img_main_visual_02_01.png" alt="">
+                    </div>
+                    <div class="detail-box">
+                      <p>Blog</p>
+                      <p>DS Division이 Event를 즐기는 방법!</p>
+                      <p>2022.09.23</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="swiper-news">
+                    <div class="tumb-box">
+                      <img src="./img/img_main_visual_02_01.png" alt="">
+                    </div>
+                    <div class="detail-box">
+                      <p>Blog</p>
+                      <p>DS Division이 Event를 즐기는 방법!</p>
+                      <p>2022.09.23</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="swiper-news">
+                    <div class="tumb-box">
+                      <img src="./img/img_main_visual_02_01.png" alt="">
+                    </div>
+                    <div class="detail-box">
+                      <p>Blog</p>
+                      <p>DS Division이 Event를 즐기는 방법!</p>
+                      <p>2022.09.23</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-pagination"></div>
             </div>
           </div>
-          <div class="box img"></div>
+          <a href="#" class="more-btn">최근 뉴스 더보기</a>
         </div>
       </section>
       <!-- 다섯번째 섹션 -->
       <section id="fifth">
         <div class="inner">
-          <h2>다양한 기초자산</h2>
-          <div class="subtitle">KOSPI200지수,KOSDAQ150지수 및 55개의 구성종목에<br>투자할 수 있습니다.</div>
+          <h2>많은 고객들이 알체라와 함께 하고 있습니다</h2>
           <div class="thumb-img-wrap">
             <ul>
               <li><img src="./img/section_2/img01.png" alt="img01"></li>
@@ -156,18 +253,13 @@
           </div>
         </div>
       </section>
-      <section>
+      <section id="sixth">
         <div class="inner">
-          <div class="box img"></div>
-          <div class="box">
-            <div class="text-box">
-              <h2>부담없이 시작하세요<br>클럽 구독 시 면도기 무료</h2>
-              <a href="#" class="common-btn">시작하기</a>
-            </div>
-          </div>
+          <img src="./img/svg_contactus.svg" alt="">
+          <h2>알체라의 AI와 함께<br>누구보다 빠르게 꿈의 시대에 도달하세요</h2>
+          <a href="#" class="more-btn">문의하기</a>
         </div>
       </section>
-    </div>
     <footer id="footer">
       <div class="inner">
         <div class="f-box logo">
@@ -188,6 +280,6 @@
           <option value="kakao">kakao</option>
         </select>
       </div>
-    </footer>
+    </footer> -->
   </body>
 </html>
