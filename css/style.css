@@ -44,6 +44,26 @@ button { border: none; background: none; }
   display: none;
 }
 
+.swiper-button-prev {
+  background: url('../img/btn_swiper_prev.svg') 0 0 no-repeat;
+}
+
+.swiper-button-prev:hover {
+  background: url('../img/btn_swiper_prev_hover.svg') 0 0 no-repeat;
+}
+
+.swiper-button-next {
+  background: url('../img/btn_swiper_next.svg') 0 0 no-repeat;
+}
+
+.swiper-button-next:hover {
+  background: url('../img/btn_swiper_next_hover.svg') 0 0 no-repeat;
+}
+
+.swiper-button-next::after, .swiper-button-prev::after {
+  display: none;
+}
+
 /*************************** 공통 요소 *******************************/
 
 .more-btn {
@@ -144,17 +164,21 @@ button { border: none; background: none; }
   box-sizing: border-box;
   font-size: 15px;
   text-align: left;
-  line-height: 25px;
+  line-height: 42px;
 }
 
-#login-menu li:nth-child(2) a:after {
+#login-menu li:nth-child(2) a p {
+  padding-right: 10px;
+}
+
+#login-menu li:nth-child(2) a p:after {
   position: relative;
   content: '';
   display: inline-block;
   background-image: url('../img/bg_demo_arrow.png');
   background-position: center;
   top: 50%;
-  right: 0;
+  right: -12px;
   width: 10px;
   height: 6px;
   transform: translateY(-50%);
@@ -199,19 +223,22 @@ button { border: none; background: none; }
 }
 
 #mainbanner .inner .maintext p {
-  position: relative;
   font-size: 120px;
   font-weight: 900;
   color: #fff;
   line-height: 1.18;
 }
 
-#mainbanner .inner .maintext p:before {
+#mainbanner .inner .maintext p span {  
+  position: relative;
+}
+
+#mainbanner .inner .maintext p span:before {
   position: absolute;
   content: '';
   width: 140px;
   height: 140px;
-  left: 1100px;
+  left: -33px;
   border-radius: 50%;
   background: #406eff;
   z-index: -50;
@@ -226,7 +253,13 @@ button { border: none; background: none; }
   /* transform: translateX(-50%); */
   padding: 0;
   cursor: pointer;
+  animation: scrolldown 0.5s ease-in infinite alternate;
 }
+
+@keyframes scrolldown {
+  0%{transform:translate(0, 0)}
+  100%{transform:translate(0, 15px)}
+  }
 
 /*************************** 컨텐츠 영역 *******************************/
 
@@ -381,11 +414,11 @@ section .inner > p {
   color: #1c4ab4;
 }
 
-#second .inner .text-box .text-box-text{
+#second .inner .text-box .text-box-text {
   margin-bottom: 60px;
 }
 
-#second .inner .box .text-box a {
+.introduce-btn {
   display: inline-block;
   position: relative;
   font-size: 20px;
@@ -395,7 +428,7 @@ section .inner > p {
   color: #406eff;
 }
 
-#second .inner .box .text-box a:after {
+.introduce-btn:after {
   content: '';
   background-image: url('../img/btn_more.svg');
   display: inline-block;
@@ -407,18 +440,27 @@ section .inner > p {
   transform: translateY(-50%);
 }
 
-#second .inner .box .text-box a:hover {
+.introduce-btn:hover {
   color: #0c254b;
 }
 
-#second .inner .box .text-box a:hover:after {
+.introduce-btn:hover:after {
   background-image: url('btn_more_hover.svg')
 }
 
 /*************** third section *****************/
 
+#third {
+  max-width: 1920px;
+}
+
 #third .inner > p {
   line-height: 28px;
+}
+
+#third .swiper {
+  overflow: hidden;
+  max-width: 1920px;
 }
 
 #third .swiper-pagination-wrap {
@@ -441,38 +483,131 @@ section .inner > p {
 }
 
 #third .swiper-slide img {
+  position: relative;
   border-radius: 20px;
+  z-index: -10000;
 }
 
-#container section:nth-child(3) .inner .box.img {
-  background: url('../img/section_3/bg_img.png');
+#third .swiper-slide .slide-box {
+  position: absolute;
+  z-index: 1000;
+  background: red;
+  top: 50%;
+  left: 70px;
+  width: 340px;
+  padding: 40px 30px;
+  color: #fff;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, .6);
+  transform: translateY(-50%);
+  text-align: left;
+  box-sizing: border-box;
 }
+
+#third .swiper-slide .slide-box img {
+  width: 60px;
+  height: 60px;
+}
+
+#third .swiper-slide .slide-box h3 {
+  margin: 30px 0 15px;
+  font-size: 24px;
+  line-height: 1.42;
+}
+
+#third .swiper-slide .slide-box p {
+  font-size: 18px;
+  line-height: 1.56;
+  opacity: .8;
+}
+
+#third .swiper-slide .slide-box a {
+  margin-top: 60px;
+}
+
+#third .swiper-btn {
+  position: absolute;
+  top: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+#third .swiper-button-prev {
+  left: 50%;
+  margin-left: -12px;
+  transform: translateX(-526px);
+}
+#third .swiper-button-next {
+  right: 50%;
+  margin-right: -12px;
+  transform: translateX(526px);
+}
+
+
 
 /*************** fourth section *****************/
 
-#fourth .swiper-box-wrap {
+#fourth .swiper.swiper-fourth {
   margin-top: 100px;
   padding: 0 50px;
 }
 
-#fourth .swiper-slide {
-  width: 300px;
-  margin-right: 40px;
-}
-
-#fourth .swiper-news .tumb-box {
-  overflow: hidden;
-}
-
-#fourth .swiper-news .tumb-box img {
-  width: 100%;
-}
-
-#fourth .swiper.fourth {
+#fourth .swiper-wrapper {
   padding: 10px 10px 20px;
 }
 
-#fourth .inner a {
+#fourth .swiper-slide {
+  max-width: 300px;
+  margin-right: 40px;
+  box-shadow: 0 5px 15px 0 rgb(12 37 75 / 15%);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+#fourth .swiper-slide .slide-box {
+  text-align: left;
+  padding: 40px;
+}
+
+#fourth .swiper-slide .slide-box h3 {
+  color: #1c4ab4;
+  font-weight: 700;
+}
+
+#fourth .swiper-slide .slide-box p {
+  margin-top: 30px;
+  font-weight: 500;
+  min-height: 103px;
+  line-height: 1.89;
+}
+
+#fourth .swiper-slide .slide-box p:last-child {
+  margin-top: 20px;
+  color: #0c254b;
+  font-size: 16px;
+  font-weight: 300;
+  min-height: 0;
+}
+
+#fourth .swiper-slide .slide-box p.new-icon:before {
+  content: 'new';
+  display: inline-block;
+  height: 22px;
+  line-height: 22px;
+  margin-right: 10px;
+  padding: 0 8px;
+  color: #406eff;
+  font-size: 10px;
+  font-weight: 500;
+  text-align: center;
+  border-radius: 40px;
+  border: 1px solid #406eff;
+  vertical-align: middle;
+  margin-top: -2px;
+}
+
+#fourth .inner .more-btn {
   margin-top: 80px;
 }
 
@@ -482,36 +617,19 @@ section#fifth {
   padding: 200px 0;
 }
 
-
-
-
-#container section .inner .thumb-img-wrap {
-  text-align: center; /*자식요소 ul을 가운데 정렬한다.(ul의 display가 inline or inline-block일 때) */
-}
-
-#container section .inner .thumb-img-wrap ul {
-  display: inline-block; /*자식요소 li의 컨텐츠 크기만큼 너비가 지정됨*/
+#fifth .swiper-wrapper {
   overflow: hidden;
 }
 
-#container section .inner .thumb-img-wrap ul:nth-child(1) {
-  margin-top: 70px;
+#fifth .swiper-wrapper ul {
+  overflow: hidden;
 }
 
-#container section .inner .thumb-img-wrap ul:nth-child(2) {
-  margin-top: 80px;
-}
+#fifth .swiper-wrapper
 
-#container section .inner .thumb-img-wrap ul li {
+#fifth .swiper-wrapper ul li {
   float: left;
-  width: calc( 100% / 6 );
-  height: 37px;
 }
-
-#container section .inner .thumb-img-wrap ul li img {
-  width: 100%; /*이미지 너비가 220px 이상/이하면 이미지의 크기가 일정하게 커지게 하기위함(li 요소의 너비 % 기준)*/
-}
-
 
 /*************** sixth section *****************/
 
