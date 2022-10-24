@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./css/initial.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="./css/style.css">
+      <script type="text/javascript" src="./js/jquery_3.5.1.js"></script>
     <script src="./js/common.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   </head>
@@ -21,15 +22,56 @@
         </div>
         <div class="inner">
           <ul id="gnb">
-            <li><a href="#first">기술</a></li>
-            <li><a href="#second">제품</a></li>
-            <li><a href="#third">솔루션</a></li>
-            <li><a href="#fourth">자료실</a></li>
-            <li><a href="#fifth">회사소개</a></li>
+            <li><a href="#first">기술</a>
+            <div class="gnb-sub">
+              <ul>
+                <li><a href="#">Visual AI</a></li>
+                <li><a href="#">AI Data</a></li>
+              </ul>
+            </div>
+            </li>
+            <li><a href="#second">제품</a>
+            <div class="gnb-sub">
+              <ul>
+                <li><a href="#">AIIR SDK</a></li>
+                <li><a href="#">AI Data</a></li>
+              </ul>
+            </div>
+            </li>
+            <li><a href="#third">솔루션</a>
+            <div class="gnb-sub">
+              <ul>
+                <li><a href="#">AIIR ID</a></li>
+                <li><a href="#">AIIR Pass</a></li>
+                <li><a href="#">AIIR Scout</a></li>
+                <li><a href="#">FireScout</a></li>
+              </ul>
+            </div>
+            </li>
+            <li><a href="#fourth">자료실</a>
+            <div class="gnb-sub">
+              <ul>
+                <li><a href="#">리소스</a></li>
+                <li><a href="#">자주하는 질문</a></li>
+                <li><a href="#">블로그</a></li>
+              </ul>
+            </div>
+            </li>
+            <li><a href="#fifth">회사소개</a>
+            <div class="gnb-sub">
+              <ul>
+                <li><a href="#">알체라 소개</a></li>
+                <li><a href="#">보도자료</a></li>
+                <li><a href="#">IR</a></li>
+                <li><a href="#">인재채용</a></li>
+                <li><a href="#">제휴/도입문의</a></li>
+              </ul>
+            </div>
+            </li>
           </ul>
           <ul id="login-menu">
-            <li><a href="#">데모신청</a></li>
-            <li><a href="#"><p>KOR</p></a></li>
+            <li class="demo-btn"><a href="#">데모신청</a></li>
+            <li class="lang-btn"><a href="#"><p>KOR</p></a></li>
           </ul>
         </div>
       </header>
@@ -297,35 +339,48 @@
         <div class="inner">
           <h2>많은 고객들이 알체라와 함께 하고 있습니다</h2>
           <div class="swiper swiper-fifth">
-            <!-- <div class="swiper-wrapper">
-              <ul>
-                <li><img src="./img/img_logo_01.png" alt=""></li>
-                <li><img src="./img/img_logo_02.png" alt=""></li>
-                <li><img src="./img/img_logo_03.png" alt=""></li>
-                <li><img src="./img/img_logo_04.png" alt=""></li>
-                <li><img src="./img/img_logo_05.png" alt=""></li>
-                <li><img src="./img/img_logo_06.png" alt=""></li>
-                <li><img src="./img/img_logo_07.png" alt=""></li>
-                <li><img src="./img/img_logo_08.png" alt=""></li>
-                <li><img src="./img/img_logo_09.png" alt=""></li>
-                <li><img src="./img/img_logo_10.png" alt=""></li>
-                <li><img src="./img/img_logo_11.png" alt=""></li>
-              </ul>
-            </div>
             <div class="swiper-wrapper">
-              <ul>
-                <li><img src="./img/img_logo_12.png" alt=""></li>
-                <li><img src="./img/img_logo_13.png" alt=""></li>
-                <li><img src="./img/img_logo_14.png" alt=""></li>
-                <li><img src="./img/img_logo_15.png" alt=""></li>
-                <li><img src="./img/img_logo_16.png" alt=""></li>
-                <li><img src="./img/img_logo_18.png" alt=""></li>
-                <li><img src="./img/img_logo_19.png" alt=""></li>
-                <li><img src="./img/img_logo_21.png" alt=""></li>
-                <li><img src="./img/img_logo_37.png" alt=""></li>
-                <li><img src="./img/img_logo_38.png" alt=""></li>
-              </ul>
-            </div> -->
+                <div class="swiper-slide">
+                  <img src="./img/img_logo_01.png" alt="">
+                  <img src="./img/img_logo_02.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img src="./img/img_logo_03.png" alt="">
+                  <img src="./img/img_logo_04.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img src="./img/img_logo_05.png" alt="">
+                  <img src="./img/img_logo_06.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img src="./img/img_logo_07.png" alt="">
+                  <img src="./img/img_logo_08.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img src="./img/img_logo_09.png" alt="">
+                  <img src="./img/img_logo_10.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img src="./img/img_logo_11.png" alt="">
+                  <img src="./img/img_logo_12.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img src="./img/img_logo_13.png" alt="">
+                  <img src="./img/img_logo_14.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img src="./img/img_logo_15.png" alt="">
+                  <img src="./img/img_logo_16.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img src="./img/img_logo_18.png" alt="">
+                  <img src="./img/img_logo_19.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img src="./img/img_logo_21.png" alt="">
+                  <img src="./img/img_logo_37.png" alt="">
+                </div>
+            </div>
             <div class="swiper-pagination"></div>
           </div>
         </div>
