@@ -380,6 +380,7 @@ section .inner > p {
   font-size: 60px;
   font-weight: 700;
   color: #1c4ab4;
+  transition: ease-in;
 }
 
 
@@ -800,6 +801,10 @@ section#sixth {
   line-height: 32px;
 }
 
+#footer .footer-menu > ul > li > ul > li:hover a {
+  color: #0c254b;
+}
+
 #footer .f-box.second {
   overflow: hidden;
   padding: 40px 0;
@@ -920,6 +925,10 @@ section#sixth {
 #footer .icon-wrap img {
   width: 100%;
   height: 100%;
+}
+
+#footer .icon-wrap img:hover {
+  transition: .3s;
 }
 
 #footer .f-box.third {
