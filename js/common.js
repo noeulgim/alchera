@@ -65,9 +65,55 @@ $({ val : 0 }).animate({ val : 99.9 }, {
   }
 });
 
+  $(".swiper-pagination-wrap ul li:nth-child(1)").click(function() {
+    $(".swiper-pagination span:nth-child(1)").trigger( "click" );
+  });
+  $(".swiper-pagination-wrap ul li:nth-child(2)").click(function() {
+    $(".swiper-pagination span:nth-child(2)").trigger( "click" );
+  });
+  $(".swiper-pagination-wrap ul li:nth-child(3)").click(function() {
+    $(".swiper-pagination span:nth-child(3)").trigger( "click" );
+  });
+  $(".swiper-pagination-wrap ul li:nth-child(4)").click(function() {
+    $(".swiper-pagination span:nth-child(4)").trigger( "click" );
+  });
+
+  function check(){
+    if($('.swiper-pagination span:nth-child(1)').classList == 'swiper-pagination-bullet-active'){
+      $(".swiper-pagination-wrap ul li:nth-child(1)").addClass('move');
+    }else {
+      $(".swiper-pagination-wrap ul li").removeClass('move');
+    }
+  }
+
+  check();
+
+  // let swiperPageLi1 = $('.swiper-pagination-wrap ul li:nth-child(1)');
+  // let swiperPageLi2 = $('.swiper-pagination-wrap ul li:nth-child(2)');
+  // let swiperPageLi3 = $('.swiper-pagination-wrap ul li:nth-child(3)');
+  // let swiperPageLi4 = $('.swiper-pagination-wrap ul li:nth-child(4)');
+  // let swiperPage1 = $('.swiper-pagination .swiper-pagination-bullet:nth-child(1)');
+  // let swiperPage2 = $('.swiper-pagination .swiper-pagination-bullet:nth-child(2)');
+  // let swiperPage3 = $('.swiper-pagination .swiper-pagination-bullet:nth-child(3)');
+  // let swiperPage4 = $('.swiper-pagination .swiper-pagination-bullet:nth-child(4)');
+  //
+  // swiperPageLi1.click(function() {
+  //   swiperPage1.trigger('click');
+  // });
+  // swiperPageLi2.click(function() {
+  //   swiperPage2.trigger('click');
+  // });
+  // swiperPageLi3.click(function() {
+  //   swiperPage3.trigger('click');
+  // });
+  // swiperPageLi4.click(function() {
+  //   swiperPage4.trigger('click');
+  // });
+
 
 //-------------------------------- swiper ----------------------------------
 
+  var pageLi = $('.swiper-pagination-wrap li')
   var swiperThird = new Swiper(".swiper-third", {
         spaceBetween: 100,
         centeredSlides: true,
