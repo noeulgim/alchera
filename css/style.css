@@ -578,7 +578,7 @@ section .inner > p {
 }
 
 .introduce-btn:hover:after {
-  background-image: url('btn_more_hover.svg')
+  background-image: url('../img/btn_more_hover.svg')
 }
 
 /*************** third section *****************/
