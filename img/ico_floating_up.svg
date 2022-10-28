@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 72 72">
+    <defs>
+        <style>
+            .cls-3{fill:#88909d}
+        </style>
+    </defs>
+    <g id="topfloating" transform="translate(-1775.886 -5659.886)">
+        <path id="패스_7161" data-name="패스 7161" d="M36 0A36 36 0 1 1 0 36 36 36 0 0 1 36 0z" transform="translate(1775.886 5659.886)" style="fill:#fff"/>
+        <path id="사각형_3394" data-name="사각형 3394" transform="translate(1794.887 5678.886)" style="fill:none" d="M0 0h34v34H0z"/>
+        <g id="그룹_6672" data-name="그룹 6672" transform="translate(-2.201 -.999)">
+            <path id="합치기_226" data-name="합치기 226" class="cls-3" d="m16429.789 26016.139-6.01-6.01-6 6.01a1.5 1.5 0 0 1-2.129-2.123l7.078-7.07a1.5 1.5 0 0 1 2.115 0l7.07 7.076a1.5 1.5 0 0 1-2.121 2.117z" transform="translate(-14609.622 -20322.623)"/>
+            <path id="패스_7154" data-name="패스 7154" class="cls-3" d="M.589 0a1.363 1.363 0 0 1 1.5 1.158v21.689A1.363 1.363 0 0 1 .589 24a1.363 1.363 0 0 1-1.5-1.158V1.162A1.363 1.363 0 0 1 .589 0z" transform="translate(1813.5 5685.957)"/>
+        </g>
+    </g>
+</svg>

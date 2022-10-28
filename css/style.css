@@ -6,6 +6,8 @@ body {
   color: #32435D;
   line-height: 28px;
   font-size: 18px;
+  width: 100%;
+  overflow-x: hidden;
 }
 ul,ol { list-style: none; }
 a { color: #fff; }
@@ -214,7 +216,7 @@ button { border: none; background: none; }
 
 #header .inner #gnb, #header .inner #login-menu { float: left; }
 
-#header .inner > ul { overflow: hidden; box-sizing: border-box; }
+#header .inner > ul { box-sizing: border-box; }
 
 #header .inner > ul > li { float: left; }
 
@@ -287,7 +289,7 @@ button { border: none; background: none; }
   border: 1px solid #fff;
 }
 
-#login-menu li:nth-child(2) a {
+#login-menu li:nth-child(2) > a {
   font-family: 'AvenirNextLTPro-Regular';
   font-weight: 400;
   position: relative;
@@ -299,11 +301,11 @@ button { border: none; background: none; }
   line-height: 42px;
 }
 
-#login-menu li:nth-child(2) a p {
+#login-menu li:nth-child(2) > a p {
   padding-right: 10px;
 }
 
-#login-menu li:nth-child(2) a p:after {
+#login-menu li:nth-child(2) > a p:after {
   position: relative;
   content: '';
   display: inline-block;
@@ -316,6 +318,37 @@ button { border: none; background: none; }
   transform: translateY(-50%);
 }
 
+#header .inner > ul > li {
+  position: relative;
+}
+
+#login-menu .lang-btn-click {
+  display: none;
+  position: absolute;
+  top: -2px;
+  left: -1px;
+  width: 102%;
+  box-sizing: border-box;
+  border: 1px solid #eee;
+  box-shadow: 0 5px 20px 0 rgb(12 37 75 / 15%);
+  border-radius: 22.5px;
+  background: #fff;
+  overflow: hidden;
+}
+
+#login-menu .lang-btn-click a {
+  display: block;
+  width: 100%;
+  padding: 9px 22px;
+  box-sizing: border-box;
+  font-size: 15px;
+  line-height: 25px;
+  color: #0c254b;
+}
+
+#login-menu .lang-btn-click div:hover {
+  background: #f8f8f9;
+}
 /*************************** 메인 배너 영역 *******************************/
 
 #mainbanner .inner{
@@ -1118,4 +1151,80 @@ section#sixth {
   width: 1px;
   height: 13px;
   background: #fff;
+}
+
+#side-btn {
+  display: block;
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  z-index: 1000;
+}
+
+#side-btn > div {
+  position: relative;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  box-shadow: 0px 4px 10px 0px rgb(0 0 0 / 50%);
+}
+
+#side-btn .chat-wrap > div {
+  position: absolute;
+  cursor: pointer;
+}
+
+#side-btn .chat-wrap div:first-child {
+  opacity: 0;
+}
+
+#side-btn .chat-wrap:hover div:first-child {
+  width: 190px;
+  margin-right: 15px;
+  right: calc(100%);
+  box-shadow: 0px 4px 10px 0px rgb(0 0 0 / 50%);
+  border-radius: 10px;
+  background: #fff;
+  opacity: 1;
+  /* top: 50%; */
+  /* transform: translateY(-50%); */
+  transition: all .2s;
+}
+
+#side-btn .chat-wrap:hover div:first-child p {
+  margin: 15px;
+}
+
+#side-btn .chat-wrap div p {
+
+}
+
+#side-btn .scroll-top {
+  margin-top: 10px;
+  right: 0;
+  cursor: pointer;
+}
+
+.transform {
+  transform: rotate(180deg);
+  transition: .5s ease-in-out;
+}
+
+.transform-verse {
+  transform: rotate(0deg);
+  transition: .5s ease-in-out;
+}
+
+@media screen and (max-width: 1440px) and (min-width:768px) {
+  body {
+    font-size: 1.2500vw;
+    line-height: 1.9444vw;
+  }
+  #header-wrap {
+    min-height: 9.7222vw;
+    padding: 0 3.125vw;
+  }
+  #header {
+    max-width: 100%;
+  }
 }

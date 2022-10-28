@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 72 72">
+    <defs>
+        <style>
+            .cls-1{fill:#fff}
+        </style>
+    </defs>
+    <g id="floating_noshadow" transform="translate(-1764 -5648)">
+        <circle id="타원_43" data-name="타원 43" class="cls-1" cx="36" cy="36" r="36" transform="translate(1764 5648)"/>
+        <g id="그룹_6500" data-name="그룹 6500">
+            <path id="합치기_30" data-name="합치기 30" d="M1354.667 5034H1347a6 6 0 0 1-6-6v-12a6 6 0 0 1 6-6h22a6 6 0 0 1 6 6v12a6 6 0 0 1-6 6h-7.666l-3.334 4z" transform="translate(442 660)" style="fill:#653dea"/>
+            <circle id="타원_57" data-name="타원 57" class="cls-1" cx="1.5" cy="1.5" r="1.5" transform="translate(1791 5681)"/>
+            <circle id="타원_58" data-name="타원 58" class="cls-1" cx="1.5" cy="1.5" r="1.5" transform="translate(1799 5681)"/>
+            <circle id="타원_59" data-name="타원 59" class="cls-1" cx="1.5" cy="1.5" r="1.5" transform="translate(1807 5681)"/>
+        </g>
+    </g>
+</svg>

@@ -6,6 +6,52 @@ $(function(){
     $('#logo h1 img').attr('src','./img/alchera_logo_w.svg');
   });
 
+  $('.lang-btn').click(function(){
+    $('.lang-btn-click').css('display','inline-block');
+  });
+
+  $(document).mouseup(function (e){
+    var LayerPopup = $(".lang-btn-click");
+      if(LayerPopup.has(e.target).length === 0){
+        LayerPopup.css('display','none');
+      }
+    });
+
+  var sectionFirstOffset = $('#first').offset();
+  $('.scroll-top img').click(function(){
+    if($(window).scrollTop() == 0){
+      $('html, body').animate({scrollTop: sectionFirstOffset.top},400);
+    }else if($(window).scrollTop() > 0){
+      $('html, body').animate({scrollTop: 0},400);
+    }
+  });
+
+  $(window).scroll(function(){
+    var wHeight = $(this).height();
+    var thisScrollTop = $(this).scrollTop();
+    // var navBar = $('nav');
+    if ( thisScrollTop <= 0 ) {
+      $('.scroll-top img').removeClass('transform');
+      $('.scroll-top img').addClass('transform-verse');
+    }else if ( thisScrollTop > 0 ){
+      $('.scroll-top img').addClass('transform');
+      $('.scroll-top img').removeClass('transform-verse');
+    }
+    // if (thisScrollTop == 0){
+    //   $('.scroll-top img').click(function(){
+    //     $('html, body').animate({scrollBottom: 400});
+    //     $(this).addClass('transform');
+    //   });
+    // }
+
+
+      if( sectionFirstOffset.top <= thisScrollTop) {
+        var bodyBg = $(this).data('background')
+        $('body').css('background-color',bodyBg);
+        $('.slide').removeClass('on');
+        $(this).addClass('on');
+      }
+  });
   //-------------------------------- counter ----------------------------------
 
   // const counter = ($counter, max) => {
