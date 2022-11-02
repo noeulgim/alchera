@@ -153,6 +153,18 @@ button { border: none; background: none; }
   background: #0c254b;
 }
 
+.active-area {
+  opacity: 0;
+  transform: translateY(70px);
+  transition: 0.4s ease-in-out;
+  transition-delay: 0s;
+}
+
+.active-area.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /*************************** header 영역 *******************************/
 
 .header-wrap-hover {
@@ -1041,14 +1053,19 @@ section#sixth {
   top: 2px;
 }
 
+#footer .email-wrap .check-wrap img.off {
+  left: 12px;
+}
+
 #footer .email-wrap .check-wrap input {
   display: none;
 }
 
 #footer .email-wrap .check-wrap label {
+  position: absolute;
   cursor: pointer;
   opacity: .7;
-  margin-left: 45px;
+  left: 137px;
 }
 
 #footer .email-wrap .check-wrap label a {

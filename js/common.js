@@ -16,13 +16,13 @@ $(function(){
         LayerPopup.css('display','none');
       }
     });
-
   var sectionFirstOffset = $('#first').offset();
+  var footerOffset = $('#footer').offset();
   $('.scroll-top img').click(function(){
     if($(window).scrollTop() == 0){
-      $('html, body').animate({scrollTop: sectionFirstOffset.top},400);
+      $('html, body').animate({scrollTop: footerOffset.top},1000);
     }else if($(window).scrollTop() > 0){
-      $('html, body').animate({scrollTop: 0},400);
+      $('html, body').animate({scrollTop: 0},1000);
     }
   });
 
@@ -51,6 +51,24 @@ $(function(){
         $('.slide').removeClass('on');
         $(this).addClass('on');
       }
+
+    $(window).scroll(function(){
+      let thisScrollTop = $(this).scrollTop();
+      $('.active-area').each(function(){
+        console.log(thisScrollTop);
+        let thisOffset = $(this).offset();
+        console.log(thisOffset.top);
+        if(thisScrollTop + 800 >= thisOffset.top && thisScrollTop + 800 <= thisOffset.top + wHeight){
+          $(this).addClass('active');
+        }else if(thisOffset.top > thisScrollTop){
+          $(this).removeClass('active');
+        }
+      });
+    });
+
+    $('.check-wrap img').click(function(){
+      $('.check-wrap img.off').toggle();
+    });
   });
   //-------------------------------- counter ----------------------------------
 
