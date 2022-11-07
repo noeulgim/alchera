@@ -339,7 +339,7 @@ button { border: none; background: none; }
   position: absolute;
   top: -2px;
   left: -1px;
-  width: 102%;
+  width: 103%;
   box-sizing: border-box;
   border: 1px solid #eee;
   box-shadow: 0 5px 20px 0 rgb(12 37 75 / 15%);
@@ -1246,6 +1246,9 @@ section#sixth {
   }
   #header {
     max-width: 100%;
+  }
+  #gnb > li > a {
+    margin-right: 60px;
   }
 
 }
