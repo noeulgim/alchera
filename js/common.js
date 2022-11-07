@@ -66,8 +66,19 @@ $(function(){
       });
     });
 
-    $('.check-wrap img').click(function(){
-      $('.check-wrap img.off').toggle();
+    $('.check-wrap img.off').click(function(){
+      $(this).css('opacity','0');
+      $('.check-wrap img.on').css({
+        'opacity': '1',
+        'z-index': '2000'
+      });
+    });
+    $('.check-wrap img.on').click(function(){
+      $(this).css({
+        'opacity': '0',
+        'z-index': '0'
+      });
+      $('.check-wrap img.off').css('opacity','1')
     });
   });
   //-------------------------------- counter ----------------------------------

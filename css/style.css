@@ -1053,6 +1053,9 @@ section#sixth {
   top: 2px;
 }
 
+#footer .email-wrap .check-wrap img.on {
+}
+
 #footer .email-wrap .check-wrap img.off {
   left: 12px;
 }
