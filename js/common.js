@@ -58,7 +58,7 @@ $(function(){
         console.log(thisScrollTop);
         let thisOffset = $(this).offset();
         console.log(thisOffset.top);
-        if(thisScrollTop + 800 >= thisOffset.top && thisScrollTop + 800 <= thisOffset.top + wHeight){
+        if(thisScrollTop + 600 >= thisOffset.top && thisScrollTop + 600 <= thisOffset.top + wHeight){
           $(this).addClass('active');
         }else if(thisOffset.top > thisScrollTop){
           $(this).removeClass('active');
